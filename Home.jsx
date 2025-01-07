@@ -20,7 +20,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import './locomotive.css'
 
 const geocodeLocation = async (query) => {
-    const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&addressdetails=1`);
+    const response = await fetch(`ADD API KEY`);
     const data = await response.json();
     if (data && data.length > 0) {
         return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
@@ -83,9 +83,9 @@ const Home = () => {
     // Define Watson Assistant Chat options
     const initializeChat = () => {
       window.watsonAssistantChatOptions = {
-        integrationID: "0f8a7f73-3dbd-446e-8533-c747cb4ade3f", // The ID of this integration
-        region: "us-south", // The region your integration is hosted in
-        serviceInstanceID: "bf228013-595d-4273-a25e-23c090f40746", // The ID of your service instance
+        integrationID: "ADD INTEGRATION ID", // The ID of this integration
+        region: "ADD REGION", // The region your integration is hosted in
+        serviceInstanceID: "ADD SERVICE_INSTANCE_ID", // The ID of your service instance
         onLoad: async (instance) => {
           await instance.render();
         },
